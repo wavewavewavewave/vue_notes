@@ -1,13 +1,29 @@
 <template>
-$END$
+  <div class="message">
+    <p>Error! {{ message }}</p>
+  </div>
 </template>
 
 <script>
 export default {
-name: "Massage.vue"
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: "Message",
+  props: {
+    message: {
+      type: String,
+      required: true,
+      default: ''
+    }
+  }
 }
 </script>
 
-<style scoped>
+<style scoped >
+.message {
+  text-align: center;
+}
 
+p {
+  color: red;
+}
 </style>
